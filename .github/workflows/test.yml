@@ -15,15 +15,15 @@ jobs:
       NULL_COMMIT: '0000000000000000000000000000000000000000'
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
       - name: Git Clone Apache Druid
-        run: git clone https://github.com/apache/druid
+        run: git clone https://github.com/apache/druid druid
 
-      # - name: Change Directory to Cloned Repo
-      #   run: cd druid
+      - name: Change Directory to Cloned Repo
+        run: cd druid
 
       - name: Test1
         run: mvn clean install -DskipTests -pl :extensions-core/parquet-extensions
