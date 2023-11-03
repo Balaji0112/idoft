@@ -23,7 +23,7 @@ jobs:
         run: git clone https://github.com/apache/druid
 
       - name: Change Directory to Cloned Repo
-        run: cd druid  # Assuming 'druid' is the name of the cloned repository
+        run: cd apache/druid
 
       - name: Test1
         run: mvn clean install -DskipTests -pl extensions-core/parquet-extensions -am
