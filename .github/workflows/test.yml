@@ -15,7 +15,7 @@ jobs:
       NULL_COMMIT: '0000000000000000000000000000000000000000'
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
