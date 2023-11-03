@@ -25,8 +25,11 @@ jobs:
       - name: list dir
         run: ls
 
-      # - name: Change Directory to Cloned Repo
-      #   run: cd druid
+      - name: Change Directory to Cloned Repo
+        run: cd druid
+
+      - name: list dir inside druid
+        run: ls
 
       # - name: Test1
       #   run: mvn clean install -DskipTests -pl extensions-core:parquet-extensions
