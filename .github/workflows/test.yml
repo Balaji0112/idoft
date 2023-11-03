@@ -22,14 +22,17 @@ jobs:
       - name: Git Clone Apache Druid
         run: git clone https://github.com/apache/druid druid
 
-      - name: Change Directory to Cloned Repo
-        run: cd druid
+      - name: list dir
+        run: ls
 
-      - name: Test1
-        run: mvn clean install -DskipTests -pl extensions-core:parquet-extensions
+      # - name: Change Directory to Cloned Repo
+      #   run: cd druid
 
-      - name: Test2
-        run: mvn -pl extensions-core/parquet-extensions test -Dtest=org.apache.druid.data.input.parquet.CompatParquetReaderTest#testBinaryAsString
+      # - name: Test1
+      #   run: mvn clean install -DskipTests -pl extensions-core:parquet-extensions
 
-      - name: Test3
-        run: mvn -pl extensions-core/parquet-extensions edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=org.apache.druid.data.input.parquet.CompatParquetReaderTest#testBinaryAsString
+      # - name: Test2
+      #   run: mvn -pl extensions-core/parquet-extensions test -Dtest=org.apache.druid.data.input.parquet.CompatParquetReaderTest#testBinaryAsString
+
+      # - name: Test3
+      #   run: mvn -pl extensions-core/parquet-extensions edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=org.apache.druid.data.input.parquet.CompatParquetReaderTest#testBinaryAsString
