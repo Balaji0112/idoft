@@ -29,9 +29,9 @@ jobs:
       - name: Git Clone Apache Druid
         run: git clone https://github.com/apache/druid druid
 
-      - name: Test1
-        run: mvn clean install -DskipTests -pl extensions-core/parquet-extensions
-        working-directory: druid
+      # - name: Test1
+      #   run: mvn clean install -DskipTests -pl extensions-core/parquet-extensions
+      #   working-directory: druid
 
       - name: Test2
         run: mvn -pl extensions-core/parquet-extensions test -Dtest=org.apache.druid.data.input.parquet.CompatParquetReaderTest#testBinaryAsString
