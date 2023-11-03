@@ -26,7 +26,7 @@ jobs:
         run: cd druid
 
       - name: Test1
-        run: mvn clean install -DskipTests -pl extensions-core/parquet-extensions -am
+        run: mvn clean install -DskipTests -pl extensions-core/parquet-extensions
 
       - name: Test2
         run: mvn -pl extensions-core/parquet-extensions test -Dtest=org.apache.druid.data.input.parquet.CompatParquetReaderTest#testBinaryAsString
