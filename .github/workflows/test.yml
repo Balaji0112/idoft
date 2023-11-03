@@ -19,21 +19,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Maven
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: 1.8
-          maven-version: 3.8.4 
+      # - name: Set up Maven
+      #   uses: actions/setup-java@v2
+      #   with:
+      #     distribution: 'adopt'
+      #     java-version: 1.8
+      #     maven-version: 3.8.4 
 
       - name: Git Clone Apache Druid
         run: git clone https://github.com/apache/druid druid
-
-      - name: list dir
-        run: ls
-
-      - name: Change Directory to Cloned Repo
-        run: cd druid
 
       - name: Test1
         run: mvn clean install -DskipTests -pl extensions-core/parquet-extensions
